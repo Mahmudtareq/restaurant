@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 import SocialLinks from "@/components/shared/socials-links";
 import { Icons } from "@/components/custom/icons";
 import MobileMenuSection from "./mobile-menu";
+import Image from "next/image";
+import { Button } from "../ui/button";
 
 // Navigation items configuration
 
@@ -30,56 +32,50 @@ const Header = () => {
     setActiveSection(href);
     setIsMobileMenuOpen(false);
   };
-
-  // Split nav items into left and right
-  const midPoint = Math.floor(navItems.length / 2);
-  const leftNavItems = navItems.slice(0, midPoint);
-  const rightNavItems = navItems.slice(midPoint);
-
   return (
-    <header className={`w-full py-5`}>
-      <div className=" px-3 container max-w-[1320px] mx-auto">
-        <div
-          className={` md:justify-between flex items-center ${
-            isMobileMenuOpen ? "justify-between" : ""
-          } mb-3 md:mb-[27px]`}
-        >
-          <div className="flex items-center justify-between w-full">
-            <div className=" hidden md:block">
-              <SocialLinks iconSize="w-[20px] h-[20px]" gap="gap-x-[18px]" />
-            </div>
-            <div className="md:hidden block ">
-              <div className="flex items-center">
-                {/* <ThemeToggleButton /> */}
-                <MobileMenuSection />
-                <Link href="/" className="flex items-center">
-                  <h1 className="text-[20px]  font-cormorant font-bold">
-                    Cake Storys
-                  </h1>
-                </Link>
-              </div>
-            </div>
-          </div>
+    <header
+      className={`fixed top-0 left-0 w-full  border-b border-primary bg-secondary z-50 h-[80px] flex items-center justify-center`}
+    >
+      <div className="container max-w-[1440px] mx-auto px-4 h-full flex items-center">
+        {/* Mobile Header */}
+        {/* Mobile Header */}
+        <div className="md:hidden flex items-center justify-between w-full px-4">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.svg"
+              width={67}
+              height={24}
+              alt="logo"
+              className="aspect-[67/24]"
+            />
+          </Link>
 
-          <div className="md:block hidden">
-            <div className="flex items-center gap-2">
-              <div className="flex items-center gap-1">
-                <Icons.call className="w-[18px] h-[18px] text-[#3E3B3] aspect-[]" />
-                <span className="text-[15px] font-comfortaa font-medium text-nowrap">
-                  +880-1XXX-XXXXXX
-                </span>
-              </div>
-
-              {/* <Button className="rounded-[24px] w-[103px] h-[30px] helvetica-neue-light bg-black dark:bg-[#F9FAFB] dark:text-[#111] hover:bg-black">
-                Subscribe
-              </Button> */}
-            </div>
+          {/* Right side: Button + Menu */}
+          <div className="flex items-center gap-2.5">
+            <Button className="bg-[#C4704F] hover:bg-[#B35F3F] text-white text-[11px] font-medium px-4 py-1.5 rounded uppercase">
+              Reservation →
+            </Button>
+            <MobileMenuSection />
           </div>
         </div>
-        <div className="hidden md:block text-center">
-          <div className="flex items-center text-center justify-center lg:gap-[60px] gap-6">
-            {/* Left Navigation Items */}
-            {leftNavItems.map((item) => {
+
+        {/* Desktop Header */}
+        <div className="hidden md:flex items-center justify-between w-full h-full">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.svg"
+              width={151}
+              height={54}
+              alt="logo"
+              className="aspect-[151/54]"
+            />{" "}
+          </Link>
+
+          {/* Navigation */}
+          <nav className="flex items-center gap-8">
+            {navItems.map((item) => {
               const isActive =
                 pathname === item.href ||
                 (item.href !== "/" && pathname.startsWith(item.href));
@@ -88,41 +84,20 @@ const Header = () => {
                   key={item.label}
                   href={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className={`text-[15px] font-comfortaa font-medium hover:text-primary transition-colors ${
-                    isActive ? "text-primary font-bold" : ""
+                  className={`text-base font-montserrat font-medium uppercase hover:text-primary  ${
+                    isActive ? "text-primary" : ""
                   }`}
                 >
                   {item.label}
                 </Link>
               );
             })}
+          </nav>
 
-            {/* Center: Logo */}
-            <Link href="/">
-              <h1 className="text-[36px] font-cormorant font-bold">
-                Cake Storys
-              </h1>
-            </Link>
-
-            {/* Right Navigation Items */}
-            {rightNavItems.map((item) => {
-              const isActive =
-                pathname === item.href ||
-                (item.href !== "/" && pathname.startsWith(item.href));
-              return (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className={`text-[15px] font-comfortaa font-medium hover:text-primary transition-colors ${
-                    isActive ? "text-primary font-bold" : ""
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </div>
+          {/* Subscribe Button */}
+          <Button className="bg-[#C4704F] hover:bg-[#B35F3F] text-white text-[13px] font-medium px-6 py-2 rounded-md uppercase tracking-wide">
+            Reservation →
+          </Button>
         </div>
       </div>
     </header>

@@ -11,20 +11,12 @@ export const navItems = [
     href: "/menu",
   },
   {
-    label: "Outlets",
-    href: "/outlets",
+    label: "About US",
+    href: "/about-us",
   },
   {
-    label: "Blog",
-    href: "/all-blogs",
-  },
-  {
-    label: "Reviews",
-    href: "/reviews",
-  },
-  {
-    label: "Subscribe",
-    href: "/subscribe",
+    label: "Contact",
+    href: "/contact",
   },
 ];
 // feature products
