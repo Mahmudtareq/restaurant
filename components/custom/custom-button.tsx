@@ -11,6 +11,7 @@ interface ButtonProps {
   className?: string;
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
+  icon?: boolean;
 }
 
 export const CustomButton: React.FC<ButtonProps> = ({
@@ -21,6 +22,7 @@ export const CustomButton: React.FC<ButtonProps> = ({
   className = "",
   disabled = false,
   type = "button",
+  icon = true,
 }) => {
   const baseStyles =
     "inline-flex items-center justify-center gap-2 rounded-[2px] font-montserrat uppercase font-semibold px-2 leading-[35px] md:px-4 py-2  md:py-2.5 text-sm md:text-base transition-all duration-300 group";
@@ -32,7 +34,7 @@ export const CustomButton: React.FC<ButtonProps> = ({
       className
     ),
     outline: cn(
-      "bg-transparent text-white hover:bg-primary hover:text-[#101020] border hover:border-primary",
+      "bg-transparent text-white hover:bg-primary hover:text-[#101020] border hover:border-[2px] hover:border-[#EDE4D2] hover:shadow-[-3px_3px_4px_0_rgba(26,26,26,0.4)]",
       className
     ),
   };
@@ -58,7 +60,7 @@ export const CustomButton: React.FC<ButtonProps> = ({
   const content = (
     <>
       <span>{children}</span>
-      <Icons.arrowTop className="w-6  transition-all duration-300" />
+      {icon && <Icons.arrowTop className="w-6  transition-all duration-300" />}
     </>
   );
 

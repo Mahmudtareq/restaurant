@@ -28,7 +28,7 @@ const defaultSocialLinks = [
 
 const SocialLinks = ({
   links = defaultSocialLinks,
-  iconSize = "w-[24px] h-[24px]",
+  iconSize = "w-[25px] h-[25px]",
   bgColor = "",
   iconColor = "",
   gap = "gap-x-[12px]",

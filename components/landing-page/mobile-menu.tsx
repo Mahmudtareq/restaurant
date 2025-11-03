@@ -13,6 +13,7 @@ import { navItems } from "@/public/sample-data/landing-page-data";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import SocialLinks from "../shared/socials-links";
 
 const MobileMenuSection = () => {
   const pathname = usePathname();
@@ -94,10 +95,12 @@ const MobileMenuSection = () => {
           </div>
         </div>
         <SheetFooter>
-          <Button type="submit">Save changes</Button>
-          <SheetClose asChild>
-            <Button variant="outline">Close</Button>
-          </SheetClose>
+          <div className="flex flex-col items-center gap-3 border-t pt-3 border-[#8E8B88]">
+            <SocialLinks iconColor="text-primary" />
+            <p className="text-xs font-medium font-montserrat md:text-base text-[#8E8B88] text-center md:text-right">
+              © 2025 SAVORÉ. All Rights Reserved.
+            </p>
+          </div>
         </SheetFooter>
       </SheetContent>
     </Sheet>
