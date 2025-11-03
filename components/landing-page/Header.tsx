@@ -9,6 +9,7 @@ import { Icons } from "@/components/custom/icons";
 import MobileMenuSection from "./mobile-menu";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { CustomButton } from "../custom/custom-button";
 
 // Navigation items configuration
 
@@ -53,9 +54,7 @@ const Header = () => {
 
           {/* Right side: Button + Menu */}
           <div className="flex items-center gap-2.5">
-            <Button className="bg-[#C4704F] hover:bg-[#B35F3F] text-white text-[11px] font-medium px-4 py-1.5 rounded uppercase">
-              Reservation →
-            </Button>
+            <CustomButton>Reservation</CustomButton>
             <MobileMenuSection />
           </div>
         </div>
@@ -95,9 +94,7 @@ const Header = () => {
           </nav>
 
           {/* Subscribe Button */}
-          <Button className="bg-[#C4704F] hover:bg-[#B35F3F] text-white text-[13px] font-medium px-6 py-2 rounded-md uppercase tracking-wide">
-            Reservation →
-          </Button>
+          <CustomButton variant="filled">Reservation</CustomButton>
         </div>
       </div>
     </header>
