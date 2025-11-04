@@ -67,7 +67,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
               </ul>
             </div>
 
-            <div className="">
+            <div className="w-full overflow-hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="671"
