@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Icons } from "./icons";
@@ -12,6 +13,7 @@ interface ButtonProps {
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
   icon?: boolean;
+  modalComponent?: React.ReactNode;
 }
 
 export const CustomButton: React.FC<ButtonProps> = ({
@@ -23,7 +25,9 @@ export const CustomButton: React.FC<ButtonProps> = ({
   disabled = false,
   type = "button",
   icon = true,
+  modalComponent,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const baseStyles =
     "inline-flex items-center justify-center gap-2 rounded-[2px] font-montserrat uppercase font-semibold px-2 leading-[35px] md:px-4 py-2  md:py-2.5 text-sm md:text-base transition-all duration-300 group";
 
@@ -63,6 +67,10 @@ export const CustomButton: React.FC<ButtonProps> = ({
       {icon && <Icons.arrowTop className="w-6  transition-all duration-300" />}
     </>
   );
+  const handleClick = () => {
+    if (modalComponent) setIsModalOpen(true);
+    else if (onClick) onClick();
+  };
 
   if (href && !disabled) {
     return (
@@ -73,13 +81,23 @@ export const CustomButton: React.FC<ButtonProps> = ({
   }
 
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={combinedClassName}
-    >
-      {content}
-    </button>
+    <>
+      <button
+        type={type}
+        disabled={disabled}
+        className={combinedClassName}
+        onClick={handleClick}
+      >
+        {content}
+      </button>
+
+      {/* ✅ Render modal dynamically if passed */}
+      {isModalOpen &&
+        React.isValidElement(modalComponent) &&
+        React.cloneElement(modalComponent as React.ReactElement<any>, {
+          open: isModalOpen,
+          setOpen: setIsModalOpen, // inject control props
+        })}
+    </>
   );
 };

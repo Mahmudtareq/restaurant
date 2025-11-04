@@ -10,6 +10,7 @@ import MobileMenuSection from "./mobile-menu";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { CustomButton } from "../custom/custom-button";
+import ReservationModal from "../custom/reservation-modal";
 
 // Navigation items configuration
 
@@ -54,7 +55,9 @@ const Header = () => {
 
           {/* Right side: Button + Menu */}
           <div className="flex items-center gap-2.5">
-            <CustomButton>Reservation</CustomButton>
+            <CustomButton modalComponent={<ReservationModal />}>
+              Reservation
+            </CustomButton>
             <MobileMenuSection />
           </div>
         </div>
@@ -94,7 +97,9 @@ const Header = () => {
           </nav>
 
           {/* Subscribe Button */}
-          <CustomButton variant="filled">Reservation</CustomButton>
+          <CustomButton variant="filled" modalComponent={<ReservationModal />}>
+            Reservation
+          </CustomButton>
         </div>
       </div>
     </header>

@@ -65,7 +65,7 @@ const MenuCard = ({
           >
             {/* Title */}
             <h1
-              className={`text-2xl md:text-[28px] lg:text-[40px] font-normal font-serif_display ${titleColor} mb-6 md:mb-8`}
+              className={`text-2xl md:text-[28px] capitalize lg:text-[40px] font-normal font-serif_display ${titleColor} mb-6 md:mb-8`}
             >
               {title}
             </h1>

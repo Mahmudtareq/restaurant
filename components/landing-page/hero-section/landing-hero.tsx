@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { CustomButton } from "@/components/custom/custom-button";
+import ReservationModal from "@/components/custom/reservation-modal";
 
 interface StatProps {
   number: string;
@@ -85,7 +86,10 @@ const LandingHero = ({
                   <p className="text-[12px] md:text-lg mb-7 md:leading-[26px] leading-[18px]">
                     {description}
                   </p>
-                  <CustomButton className="cursor-pointer">
+                  <CustomButton
+                    className="cursor-pointer"
+                    modalComponent={<ReservationModal />}
+                  >
                     {buttonText}
                   </CustomButton>
                 </div>
