@@ -60,3 +60,38 @@ export const reviews = [
     avatar: "/images/review/corina-mcoy.svg",
   },
 ];
+
+export const menuItems = [
+  {
+    id: 1,
+    name: "Dim Sum Basket",
+    description: "Minced Chicken, Cabbage, Carrot, Soy Dip",
+    price: "$ 6.5",
+    image:
+      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+  },
+  {
+    id: 2,
+    name: "Crispy Prawn Nachos",
+    description: "Prawn, Wonton Chips, Chili Mayo, Lime",
+    price: "$ 7.8",
+    image:
+      "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=800&q=80",
+  },
+  {
+    id: 3,
+    name: "Chicken Gyoza",
+    description: "Chicken, Garlic, Sesame Oil, Soy Sauce",
+    price: "$ 6.9",
+    image:
+      "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80",
+  },
+  {
+    id: 4,
+    name: "Veggie Spring Roll",
+    description: "Cabbage, Carrot, Bell Pepper, Sweet Chili",
+    price: "$ 5.5",
+    image:
+      "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=800&q=80",
+  },
+];
