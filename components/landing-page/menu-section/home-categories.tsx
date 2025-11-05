@@ -7,8 +7,8 @@ const HomeCategories = () => {
 
   const categories = [
     "Appetizers",
-    "Sides",
     "Main Dishes",
+    "Sides",
     "Beverages",
     "Desserts",
   ];

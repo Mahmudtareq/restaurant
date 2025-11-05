@@ -1,15 +1,8 @@
 "use client";
 
+import { MenuItem } from "@/lib/types";
 import Image from "next/image";
 import { useState } from "react";
-
-interface MenuItem {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-}
 
 interface MenuCardProps {
   title?: string;
@@ -108,7 +101,7 @@ const MenuCard = ({
                       )}
 
                       <span className="text-base md:text-lg lg:text-xl font-semibold text-primary whitespace-nowrap flex-shrink-0">
-                        {item.price}
+                        $ {item.price}
                       </span>
                     </div>
                     <p

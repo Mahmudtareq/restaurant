@@ -11,7 +11,7 @@ export default function PublicLayout({
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <ThemeToggleButton />
+      {/* <ThemeToggleButton /> */}
       <main className="grow">{children}</main>
       <FooterSection />
     </div>

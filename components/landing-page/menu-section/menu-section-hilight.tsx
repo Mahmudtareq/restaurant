@@ -15,7 +15,6 @@ export default function MenuSectionHighlight() {
 
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const [previousIndex, setPreviousIndex] = useState(0);
-  console.log("filteredItems", filteredItems);
 
   useEffect(() => {
     if (filteredItems?.length > 0) {
@@ -147,7 +146,7 @@ export default function MenuSectionHighlight() {
                 </div>
 
                 {/* Text Content */}
-                <div className="pt-24 flex-1 flex-col z-50">
+                <div className="lg:pt-24 pt-10 flex-1 flex-col z-50 text-center md:text-start">
                   <motion.h2
                     key={`title-${selectedItem.id}`}
                     initial={{ opacity: 0, x: -20 }}
@@ -171,7 +170,7 @@ export default function MenuSectionHighlight() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5 }}
-                    className="text-[#8E8B88] md:text-lg text-sm font-medium font-montserrat mt-6"
+                    className="text-[#8E8B88] md:text-lg text-sm font-medium font-montserrat lg:mt-20 mt-2 mb-4"
                   >
                     {selectedItem.description}
                   </motion.p>

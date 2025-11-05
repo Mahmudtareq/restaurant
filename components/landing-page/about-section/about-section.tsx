@@ -53,7 +53,7 @@ const AboutSection = ({
   ],
 }: AboutSectionProps) => {
   return (
-    <section className="py-16 md:py-24 ">
+    <section className="py-14 md:py-16">
       <div className="max-w-[1440px] mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-[150px]">
           {/* Left Side - Image */}
@@ -97,7 +97,7 @@ const AboutSection = ({
           </div>
 
           {/* Right Side - Content */}
-          <div className="space-y-8">
+          <div className="md:space-y-8 space-y-6">
             {/* Badge */}
             <div className="md:block hidden">
               <div className="flex items-center gap-2 mb-2 ">
@@ -114,12 +114,12 @@ const AboutSection = ({
             </div>
 
             {/* Description */}
-            <p className="text-xs md:text-lg leading-[18px] md:leading-[28px] md:mt-12">
+            <p className="text-xs md:text-lg font-medium font-montserrat leading-[18px] md:leading-[28px] md:mt-12">
               {description}
             </p>
 
             {/* Features */}
-            <div className="grid grid-cols-2 gap-8 pt-6">
+            <div className="grid grid-cols-2 gap-8 pt-6 text-center">
               {features.map((feature, index) => (
                 <Feature key={index} {...feature} />
               ))}

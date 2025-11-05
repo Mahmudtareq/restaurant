@@ -12,11 +12,11 @@ const LandingPage = () => {
     <>
       <LandingHero />
       <AboutSection />
-      <OurChefsHome />
-      <ContactSectionPage />
-      <ExperienceHero />
       <HomeMenuPage />
+      <OurChefsHome />
+      <ExperienceHero />
       <ReviewCarousel />
+      <ContactSectionPage />
     </>
   );
 };

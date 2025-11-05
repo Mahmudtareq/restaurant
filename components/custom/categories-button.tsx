@@ -16,7 +16,7 @@ const CategoriesButton = ({
   activeCategory,
   className = "",
   activeClassName = "bg-[#1B1B1B] text-[#F9F3F0]",
-  inactiveClassName = "font-medium font-montserrat border border-[#8E8B88] hover:border-primary text-base hover:text-primary",
+  inactiveClassName = "font-medium font-montserrat border border-[#8E8B88] hover:border-primary md:text-base text-[11px] hover:text-primary",
 }: CategoryFilterProps) => {
   return (
     <div
@@ -30,7 +30,7 @@ const CategoriesButton = ({
           <button
             key={category}
             onClick={() => onCategoryChange(category)}
-            className={`px-6 py-2.5 capitalize cursor-pointer duration-300 rounded-md ${
+            className={`md:px-6 px-4 md:py-2.5 py-2 capitalize cursor-pointer duration-300 rounded-md ${
               isActive ? activeClassName : inactiveClassName
             }`}
           >
