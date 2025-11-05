@@ -1,4 +1,3 @@
-import React from "react";
 import MenuSectionHome from "@/components/landing-page/menu-section/menu-section-home";
 import { MenuFilterProvider } from "@/context/menu-filter-context";
 

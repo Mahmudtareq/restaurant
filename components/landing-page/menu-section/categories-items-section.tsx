@@ -4,7 +4,15 @@ import { useMenuFilter } from "@/context/menu-filter-context";
 const CategoriesItemsSection = () => {
   const { activeCategory, handleCategoryChange } = useMenuFilter();
 
-  const categories = ["All", "Appetizers", "Soup", "Chicken", "Rice", "Beef"];
+  const categories = [
+    "All",
+    "Appetizers",
+    "Soup",
+    "Chicken",
+    "Rice",
+    "Beef",
+    "Noodles",
+  ];
   return (
     <div className="max-w-[1440px] mx-auto pt-10 px-4">
       <div className="max-w-6xl mx-auto">

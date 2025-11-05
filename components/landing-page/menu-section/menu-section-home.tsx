@@ -7,6 +7,7 @@ import ContactSectionPage from "../contact-section/contact-section-page";
 import CategoriesItemsSection from "./categories-items-section";
 import { useMenuFilter } from "@/context/menu-filter-context";
 import MenuCardSkeleton from "./menu-card-skeleton";
+import NoItemsCard from "./no-items-card";
 
 interface MenuItem {
   id: number;
@@ -32,6 +33,7 @@ const MenuSectionHome = () => {
   };
 
   const groupedItems = groupByCategory(filteredItems);
+  const hasItems = Object.keys(groupedItems).length > 0;
 
   return (
     <div className="py-16">
@@ -46,6 +48,11 @@ const MenuSectionHome = () => {
         {isLoading ? (
           <div className="space-y-8">
             <MenuCardSkeleton count={2} />
+          </div>
+        ) : !hasItems ? (
+          // ✅ No items found
+          <div className="py-5">
+            <NoItemsCard />
           </div>
         ) : (
           <>

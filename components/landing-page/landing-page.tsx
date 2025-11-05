@@ -6,6 +6,7 @@ import ExperienceHero from "./experience-section/experience-hero";
 import ContactSectionPage from "./contact-section/contact-section-page";
 import ReviewCarousel from "./review-section/review-carousel";
 import MenuSectionHighlight from "./menu-section/menu-section-hilight";
+import HomeMenuPage from "./menu-section/home-menu-page";
 
 const LandingPage = () => {
   return (
@@ -15,7 +16,7 @@ const LandingPage = () => {
       <OurChefsHome />
       <ContactSectionPage />
       <ExperienceHero />
-      <MenuSectionHighlight />
+      <HomeMenuPage />
       <ReviewCarousel />
     </>
   );
