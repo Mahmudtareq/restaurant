@@ -5,7 +5,6 @@ import OurChefsHome from "./our-chefs-section/our-chefs-home";
 import ExperienceHero from "./experience-section/experience-hero";
 import ContactSectionPage from "./contact-section/contact-section-page";
 import ReviewCarousel from "./review-section/review-carousel";
-import MenuSectionHighlight from "./menu-section/menu-section-hilight";
 import HomeMenuPage from "./menu-section/home-menu-page";
 
 const LandingPage = () => {

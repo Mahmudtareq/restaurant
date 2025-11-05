@@ -19,7 +19,9 @@ const CategoriesButton = ({
   inactiveClassName = "font-medium font-montserrat border border-[#8E8B88] hover:border-primary text-base hover:text-primary",
 }: CategoryFilterProps) => {
   return (
-    <div className={`flex flex-wrap gap-3 justify-center ${className}`}>
+    <div
+      className={`flex flex-wrap gap-3 md:justify-center items-center ${className}`}
+    >
       {categories.map((category) => {
         const isActive =
           activeCategory?.toLowerCase() === category.toLowerCase();

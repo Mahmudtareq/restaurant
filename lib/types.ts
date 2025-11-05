@@ -1,34 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-export interface Category {
-  id: string;
-  name: string;
-  slug: string;
-  count?: number;
-}
-
-export interface AllBlogsHeaderProps {
-  onCategoryChange?: (category: Category, filteredItems: any[]) => void;
-}
-
-export interface FeatureCardProps {
-  id?: number | string;
-  image: string;
-  tagLabel?: string;
-  category?: string;
-  tagColor?: string;
-  title: string;
-  description: string;
-  date: string;
-  readTime?: string;
-  slug: string;
-  author?: string;
-  authorImage?: string;
-  className?: string;
-  tips: string;
-  layout?: "vertical" | "horizontal-left" | "horizontal-right";
-  showSocialIcons?: boolean;
-}
-
 // bakery types start here
 export type ProductItem = {
   title?: string;
@@ -54,3 +23,12 @@ export type ButtonProps = {
 export type MenuProductsItemsCardProps = {
   product: MenuProductItems;
 };
+
+export interface MenuItem {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  category?: string;
+}

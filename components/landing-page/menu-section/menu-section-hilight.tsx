@@ -8,14 +8,7 @@ import { CustomButton } from "@/components/custom/custom-button";
 import { useHomeMenuFilter } from "@/context/home-menu-context";
 import HomeMenuLoader from "./home-menu-loader";
 import NoItemsCard from "./no-items-card";
-
-interface MenuItem {
-  id: number;
-  name: string;
-  price: string; // keep string for compatibility with context
-  description: string;
-  image: string;
-}
+import { MenuItem } from "@/lib/types";
 
 export default function MenuSectionHighlight() {
   const { activeCategory, isLoading, filteredItems } = useHomeMenuFilter();
@@ -24,11 +17,9 @@ export default function MenuSectionHighlight() {
   const [previousIndex, setPreviousIndex] = useState(0);
   console.log("filteredItems", filteredItems);
 
-  // ✅ Update selected item when filter changes
-  // ✅ Automatically set first item active when filteredItems change
   useEffect(() => {
     if (filteredItems?.length > 0) {
-      setSelectedItem(filteredItems[0]); // make first item active
+      setSelectedItem(filteredItems[0]);
       setPreviousIndex(0);
     } else {
       setSelectedItem(null);
@@ -173,7 +164,7 @@ export default function MenuSectionHighlight() {
                     transition={{ delay: 0.4 }}
                     className="text-lg md:text-xl lg:text-[28px] font-normal text-primary font-serif_display"
                   >
-                    ${Number(selectedItem.price).toFixed(1)}
+                    $ {selectedItem.price.toFixed(1)}
                   </motion.p>
                   <motion.p
                     key={`desc-${selectedItem.id}`}
@@ -220,7 +211,7 @@ export default function MenuSectionHighlight() {
                       {item.name}
                     </h3>
                     <p className="text-primary font-montserrat md:text-lg text-sm font-medium">
-                      ${Number(item.price).toFixed(1)}
+                      $ {item.price.toFixed(1)}
                     </p>
                   </div>
                 </div>

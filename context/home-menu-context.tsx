@@ -1,4 +1,5 @@
 "use client";
+import { MenuItem } from "@/lib/types";
 import { menuCategories } from "@/public/sample-data/landing-page-data";
 import React, {
   createContext,
@@ -7,15 +8,6 @@ import React, {
   useEffect,
   ReactNode,
 } from "react";
-
-interface MenuItem {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  image: string;
-  category?: string;
-}
 
 interface MenuFilterContextType {
   activeCategory: string;

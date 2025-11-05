@@ -8,15 +8,7 @@ import CategoriesItemsSection from "./categories-items-section";
 import { useMenuFilter } from "@/context/menu-filter-context";
 import MenuCardSkeleton from "./menu-card-skeleton";
 import NoItemsCard from "./no-items-card";
-
-interface MenuItem {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  image: string;
-  category?: string;
-}
+import { MenuItem } from "@/lib/types";
 
 const MenuSectionHome = () => {
   const { activeCategory, isLoading, filteredItems } = useMenuFilter();

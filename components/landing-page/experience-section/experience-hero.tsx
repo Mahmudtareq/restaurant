@@ -1,4 +1,5 @@
 import { CustomButton } from "@/components/custom/custom-button";
+import ReservationModal from "@/components/custom/reservation-modal";
 import Image from "next/image";
 import React from "react";
 
@@ -43,7 +44,9 @@ const ExperienceHero = () => {
             in. Whether it’s a quiet dinner or a friendly gathering, Savoré
             offers an inviting space where good food and comfort come together.
           </p>
-          <CustomButton>Book a Table</CustomButton>
+          <CustomButton modalComponent={<ReservationModal />}>
+            Book a Table
+          </CustomButton>
         </div>
       </div>
 
