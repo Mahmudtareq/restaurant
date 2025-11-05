@@ -101,7 +101,7 @@ const ReservationModal = ({ open, setOpen }: ReservationModalProps) => {
   return (
     <Dialog open={currentOpen} onOpenChange={handleOpenChange}>
       <DialogContent className="bg-[#f5f0e8] sm:max-w-[650px] rounded-[2px] p-0 gap-0 border-primary">
-        <div className="relative px-4 py-8">
+        <div className="relative px-8 py-8">
           <DialogHeader>
             <DialogTitle className="text-center text-xl lg:text-[40px] md:text-[28px] font-serif_display md:leading-[46px] leading-[18px] font-normal">
               Book A Table

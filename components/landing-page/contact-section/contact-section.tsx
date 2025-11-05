@@ -1,5 +1,6 @@
 import { CustomButton } from "@/components/custom/custom-button";
 import { Icons } from "@/components/custom/icons";
+import ReservationModal from "@/components/custom/reservation-modal";
 import Image from "next/image";
 import React from "react";
 
@@ -45,13 +46,18 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 priority
               />
               <div className="absolute bottom-6 left-6 md:block hidden">
-                <CustomButton className="">{buttonLabel}</CustomButton>
+                <CustomButton
+                  className=""
+                  modalComponent={<ReservationModal />}
+                >
+                  {buttonLabel}
+                </CustomButton>
               </div>
             </div>
           </div>
 
           {/* Right Side: Info Panel */}
-          <div className="bg-[#1D1C1C] text-[#E8E8E8] px-8 py-10 flex flex-col justify-between md:w-[830px] md:h-[760px]">
+          <div className="bg-[#1D1C1C] text-[#E8E8E8] px-8 py-10 flex flex-col justify-between md:w-[450px] lg:w-[803px] md:h-[760px]">
             {/* Open Hours */}
             <div>
               <h3 className="text-primary font-normal font-serif_display text-base md:text-2xl lg:text-[28px] mb-6 md:mb-[30px] lg:mb-[40px]">
@@ -104,7 +110,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                       <p className="text-[#F9F3F0] text-sm md:text-lg leading-[18px] md:leading-[26px] font-medium">
                         {loc.address}
                       </p>
-                      <p className="text-[#F9F3F0] text-sm md:text-lg leading-[18px] md:leading-[26px] font-medium">
+                      <p className="text-[#F9F3F0] text-sm md:text-lg  md:leading-[26px] leading-[18px] font-medium">
                         {loc.openHours}
                       </p>
                     </div>

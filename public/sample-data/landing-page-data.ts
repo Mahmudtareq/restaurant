@@ -85,32 +85,28 @@ export const menuCategories = [
         name: "Dim Sum Basket",
         description: "Minced Chicken, Cabbage, Carrot, Soy Dip",
         price: "$ 6.5",
-        image:
-          "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+        image: "/images/menu-hero/dim-sum.svg",
       },
       {
         id: 2,
         name: "Crispy Prawn Nachos",
         description: "Prawn, Wonton Chips, Chili Mayo, Lime",
         price: "$ 7.8",
-        image:
-          "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=800&q=80",
+        image: "/images/menu-hero/shrimp-tempura.svg",
       },
       {
         id: 3,
         name: "Chicken Gyoza",
         description: "Chicken, Garlic, Sesame Oil, Soy Sauce",
         price: "$ 6.9",
-        image:
-          "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80",
+        image: "/images/menu-hero/chicken-satay.svg",
       },
       {
         id: 4,
         name: "Veggie Spring Roll",
         description: "Cabbage, Carrot, Bell Pepper, Sweet Chili",
         price: "$ 5.5",
-        image:
-          "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=800&q=80",
+        image: "/images/menu-hero/crispy-rolls.svg",
       },
     ],
   },
@@ -265,5 +261,40 @@ export const menuCategories = [
           "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&q=80",
       },
     ],
+  },
+];
+
+export const menuItems = [
+  {
+    id: 1,
+    name: "Crispy Spring Rolls",
+    price: 5.2,
+    description:
+      "Golden fried rolls filled with vegetables and herbs served with sweet chili dip.",
+    image: "/images/menu-hero/crispy-rolls.svg",
+  },
+  {
+    id: 2,
+    name: "Chicken Satay",
+    price: 5.4,
+    description:
+      "Grilled chicken skewers marinated in coconut curry, served with peanut sauce.",
+    image: "/images/menu-hero/chicken-satay.svg",
+  },
+  {
+    id: 3,
+    name: "Shrimp Tempura",
+    price: 6.9,
+    description:
+      "Lightly battered and fried shrimp with tempura dipping sauce.",
+    image: "/images/menu-hero/shrimp-tempura.svg",
+  },
+  {
+    id: 4,
+    name: "Dim Sum Basket",
+    price: 12.4,
+    description:
+      "Steamed dumplings filled with minced chicken and vegetables served with soy chili dip.",
+    image: "/images/menu-hero/dim-sum.svg",
   },
 ];

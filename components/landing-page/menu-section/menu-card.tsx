@@ -130,7 +130,7 @@ const MenuCard = ({
             }`}
           >
             <div className="relative w-full h-full flex items-center justify-center">
-              <div className="relative lg:w-[450px] lg:h-[450px] w-[280px] h-[280px] rounded-full overflow-hidden shadow-xl transition-all duration-300">
+              <div className="relative lg:w-[450px] lg:h-[450px] w-[280px] h-[280px] rounded-full overflow-hidden  transition-all duration-300">
                 <div
                   className={`w-full h-full transition-all duration-300 ${
                     isTransitioning
